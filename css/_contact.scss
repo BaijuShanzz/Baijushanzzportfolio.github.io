@@ -1,0 +1,64 @@
+.contact-section {
+  padding-top: 4rem;
+  .contact-container {
+    .contact-form {
+      background: $primary-color;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      flex-direction: row;
+      @include respond-below(sm) {
+        flex-direction: column;
+      }
+      .contact-details{
+        flex-basis: 30%;
+       
+        padding: 15px 0px 0px 80px;
+
+        @include respond-below(sm){
+          padding-left: 20px;
+        }
+        ul{
+          li{
+          padding: 10px 0px 10px 0px;
+          color: $secondary-color;
+            span{
+              margin-left: 20px;
+              @include respond-above(lg){
+                font-size: 1.3rem;
+              }
+            }
+          }
+        }
+
+      }
+      .contact-message{
+        flex-basis: 70%;
+        padding-right: 80px;
+        @include respond-below(sm){
+          padding-right: 30px;
+        }
+        form{
+            width: 100%;
+            input,textarea{
+                width: 100%;
+                border: 0;
+                outline: none;
+                background:#262626;
+                padding: 15px;
+                padding-right: 25px;
+                margin: 15px;
+                color: #fff;
+                font-size: 18px;
+                border-radius: 6px;
+                @include respond-above(lg){
+                  font-size: 22px;
+                }
+            }
+        }
+      }
+     
+     
+    }
+  }
+}
+
+

@@ -1,0 +1,24 @@
+.primary-btn{
+    display: block;
+    color: $secondary-color;
+    margin: 10px auto;
+    margin-bottom: 40px;
+    width: fit-content;
+    border: 1px solid $secondary-color;
+    padding: 14px 50px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: $font-bold;
+    cursor: pointer;
+    transition: background 0.5s;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    &:hover{
+        background: $secondary-color;
+        color: $primary-color;
+    }
+    @include respond-above(lg){
+        margin-top: 20px;
+        font-size: 18px;
+    }
+}
+

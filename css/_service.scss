@@ -1,0 +1,62 @@
+.service-section {
+  margin-top: 2rem;
+  
+  .uk-container {
+   
+    .service-container {
+      .services-list {
+        @include respond-above(sm){
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          
+        }
+        .service-card {
+          background: $primary-color;
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+          transition: background 0.5s, transform 0.5s;               
+          @include respond-below(sm) {
+            border-radius: 7px;
+            padding: 0 25px;
+          }
+
+          @include respond-above(sm){
+            padding: 0 30px;
+            max-width: 30%;
+            padding: 2.5rem 1.3rem; 
+            border-radius: 1rem;
+               
+          }
+
+          .service-head {
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 1.4rem;                          
+              padding: 0.4rem 0;
+              font-weight: 500;
+
+          }
+          .service-description {
+            text-align: center;
+            @include respond-below(sm) {
+              padding-bottom: 1rem;           
+            }
+            @include respond-above(lg){
+              font-size: 25px;
+              font-weight: 300;
+            }
+
+          }
+          &:hover {
+            background: $secondary-color;           
+            color: white !important;
+            transform: translateY(-10px);
+          }
+         
+        }
+
+      }
+
+    }
+  }
+}

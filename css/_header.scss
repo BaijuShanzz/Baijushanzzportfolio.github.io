@@ -1,0 +1,133 @@
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  width: 100%;
+  
+  .uk-flex {
+    @include respond-above(sm) {
+      height: 70px;
+    }
+  }
+  .logo {
+    a {
+      h3 {
+        color: white;  
+        @include respond-between(xs, sm) {
+          font-size: 1.9rem;
+        }     
+        @include respond-above(sm) {
+          color: $primary-color;
+          font-size: 1.6rem;
+          font-weight: 600;
+        }
+        @include respond-above(lg){
+          font-size: 1.8rem;
+          
+        }
+       
+      }
+    }
+  }
+  
+  .navbar {
+    
+    .nav-list{
+      @include respond-above(sm) {
+        display: flex;
+      }
+      li {
+        
+        @include respond-above(sm) {
+          padding-right: 10px;
+          padding-left: 10px;
+        }
+        a {
+          color: $primary-color;
+            @include respond-above(sm){
+                color: $primary-color;
+                text-transform: uppercase;
+                font-weight: $font-600;
+                padding-right: 0.5rem;
+                padding-left: 0.5rem;
+                display: block;
+                position: relative;
+                &::after {
+                  content: '';
+                  width: 0;
+                  height: 2px;
+                  background-color: $primary-color;                  
+                  position: absolute;
+                  left: 0;
+                  bottom: -6px;
+                  transition: all 500ms ease;
+                }
+                &:hover::after{
+                  width: 100%;
+                }
+            }
+            @include respond-above(lg){
+              font-weight: 700;
+            }
+        }
+      }
+    }
+    
+  }
+}
+
+
+// mobile menu css
+
+.fa-bars{
+  cursor: pointer;
+  color: white;
+}
+
+.menu-logo{
+  display: none;
+} 
+
+.navbar{
+  
+}
+@media(max-width: 767px){
+  .menu-logo{
+    display: block;
+  }
+
+  .nav-list{
+    transform: translateX(100%);
+    transition: transform ease 0.9s;
+    position: absolute;
+    display: block;
+    top: 80px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 87vh;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center; 
+  }
+
+  .nav-list{
+    .nav-item{
+      a{
+        display: block;
+        font-size: 30px;
+        font-weight: bold;
+        padding: 30px;
+      }
+    }
+  }
+
+  .nav-list.isActive{
+    transform: translateX(0%);
+  }
+
+}

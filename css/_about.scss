@@ -1,0 +1,115 @@
+.about-section {
+  margin-top: 4rem;
+
+  .uk-container {
+    .about-container {
+      background: $primary-color;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      @include respond-below(sm) {
+        padding: 20px 15px 0px 15px;
+      }
+      @include respond-above(lg){
+        padding: 20px;
+      }
+
+      .about-row {
+        @include respond-above(sm) {
+          display: flex;
+        }
+        .about-img {
+          img {
+            padding: 15px 15px 0px 15px;
+            border-radius: 1rem;
+            
+            @include respond-above(sm) {
+              padding: 15px;
+              border-radius: 1.4rem;
+            }
+
+          }
+        }
+        .about-personal-details {
+          padding: 20px 50px 0px 15px;
+          @include respond-above(lg){
+            padding: 20px;
+          }
+          .about-title {
+            position: relative;
+            
+            &::after {
+              content: "";
+              width: 100px;
+              height: 3px;
+              background-color: $secondary-color;
+              position: absolute;
+              left: 0;
+              bottom: -3px;
+              z-index: 30;
+            }
+            @include respond-between(xs, sm) {
+              font-size: 2.8rem;
+            } 
+          }
+          .about-description {
+            @include respond-between(xs, sm) {
+              font-size: 1.5rem;
+            } 
+            @include respond-above(sm) {
+              font-size: 1.25rem;
+              font-weight: 300;
+            }
+            @include respond-above(lg){
+              font-size: 1.50rem;
+              font-weight: 300;
+            }
+          }
+          .tab-titles {
+            .tab-contents{
+              .details-head{
+                color: $secondary-color;
+                font-size: 1.3rem;
+                font-weight: bold;
+                font-variant: small-caps;
+                line-height: 0;
+                
+                
+               
+                @include respond-below(sm){
+                  font-size: 1.4rem;
+                }
+              }
+              ul{
+                li{
+                  list-style: disc;
+                  font-size: 1rem;
+                  margin-left: 15px;
+                  
+                 
+                }
+              }
+              @include respond-between(xs, sm){
+                margin-bottom: 30px;
+              }
+             
+              
+            }
+            @include respond-below(sm){
+              flex-direction: column;
+            }
+          }
+          .tab-contents{
+            ul{
+              li{
+                @include respond-above(lg){
+                  font-size: 25px;
+                  font-weight: 400;
+                }
+                
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
